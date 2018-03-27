@@ -1,14 +1,14 @@
 
-// Initialize Firebase
-// TODO: Replace with your project's customized code snippet
-// var config = {
-//     apiKey: "<API_KEY>",
-//     authDomain: "<PROJECT_ID>.firebaseapp.com",
-//     databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-//     storageBucket: "<BUCKET>.appspot.com",
-//     messagingSenderId: "<SENDER_ID>",
-// };
-// firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4BxBf9kG3jICJYjZbwPkuqpnjBqOkhjQ",
+    authDomain: "csl-hw7.firebaseapp.com",
+    databaseURL: "https://csl-hw7.firebaseio.com",
+    projectId: "csl-hw7",
+    storageBucket: "",
+    messagingSenderId: "670394771122"
+  };
+  firebase.initializeApp(config);
 
 // jQuery wrapper
 $(document).ready(function () {
