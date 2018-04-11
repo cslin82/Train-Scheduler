@@ -1,4 +1,3 @@
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyA4BxBf9kG3jICJYjZbwPkuqpnjBqOkhjQ",
@@ -10,6 +9,11 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
+
+// other global variables
+var dbName = "trains";
+
+
 
 // jQuery wrapper
 $(document).ready(function () {
@@ -28,8 +32,8 @@ $(document).ready(function () {
         console.log('btn-submit clicked');
         console.log(inputTrainName, inputDestination, inputFirstTime, inputFrequency);
 
-    });
+    }); // btn-submit click handler
 
-});
+}); // jQuery
 
 
