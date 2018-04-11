@@ -1,22 +1,34 @@
 
-  // Initialize Firebase
-  var config = {
+// Initialize Firebase
+var config = {
     apiKey: "AIzaSyA4BxBf9kG3jICJYjZbwPkuqpnjBqOkhjQ",
     authDomain: "csl-hw7.firebaseapp.com",
     databaseURL: "https://csl-hw7.firebaseio.com",
     projectId: "csl-hw7",
     storageBucket: "csl-hw7.appspot.com",
     messagingSenderId: "670394771122"
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
+var database = firebase.database();
 
 // jQuery wrapper
 $(document).ready(function () {
     console.log("ready!");
 
+    // grab DOM elements
+    var trainsOutput = $('#trains-output');
 
-    firebase.initializeApp(config);
-    var database = firebase.database();
+    var inputTrainName = $('#input-train-name').val().trim();
+    var inputDestination = $('#input-destination').val().trim();
+    var inputFirstTime = $('#input-first-time').val().trim();
+    var inputFrequency = $('#input-frequency').val().trim();
+
+    $('#btn-submit').click(function (event) {
+        event.preventDefault();
+        console.log('btn-submit clicked');
+        console.log(inputTrainName, inputDestination, inputFirstTime, inputFrequency);
+
+    });
 
 });
 
