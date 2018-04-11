@@ -5,7 +5,7 @@
     authDomain: "csl-hw7.firebaseapp.com",
     databaseURL: "https://csl-hw7.firebaseio.com",
     projectId: "csl-hw7",
-    storageBucket: "",
+    storageBucket: "csl-hw7.appspot.com",
     messagingSenderId: "670394771122"
   };
   firebase.initializeApp(config);
@@ -14,4 +14,10 @@
 $(document).ready(function () {
     console.log("ready!");
 
+
+    firebase.initializeApp(config);
+    var database = firebase.database();
+
 });
+
+
