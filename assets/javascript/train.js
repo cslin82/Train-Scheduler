@@ -22,15 +22,22 @@ $(document).ready(function () {
     // grab DOM elements
     var trainsOutput = $('#trains-output');
 
-    var inputTrainName = $('#input-train-name').val().trim();
-    var inputDestination = $('#input-destination').val().trim();
-    var inputFirstTime = $('#input-first-time').val().trim();
-    var inputFrequency = $('#input-frequency').val().trim();
-
     $('#btn-submit').click(function (event) {
         event.preventDefault();
         console.log('btn-submit clicked');
+        
+        var inputTrainName = $('#input-train-name').val().trim();
+        var inputDestination = $('#input-destination').val().trim();
+        var inputFirstTime = $('#input-first-time').val().trim();
+        var inputFrequency = $('#input-frequency').val().trim();
         console.log(inputTrainName, inputDestination, inputFirstTime, inputFrequency);
+
+        var newTR = $('<tr>');
+        [inputTrainName, inputDestination, inputFrequency].forEach(element => {
+            newTR.append($('<td>').text(element));
+        });
+        trainsOutput.append(newTR);
+
 
     }); // btn-submit click handler
 
